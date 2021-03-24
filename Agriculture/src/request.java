@@ -19,6 +19,7 @@ import javax.swing.DefaultComboBoxModel;
 import java.util.Timer;
 import java.util.TimerTask;
 import javax.swing.JSpinner;
+import javax.swing.JButton;
 
 @SuppressWarnings("serial")
 public class request extends JFrame {
@@ -141,76 +142,81 @@ public class request extends JFrame {
 		lblNewLabel_1_11.setBounds(420, 430, 77, 14);
 		contentPane.add(lblNewLabel_1_11);
 		
-		JSpinner spinner = new JSpinner();
-		spinner.setBounds(219, 253, 30, 20);
-		contentPane.add(spinner);
+		JSpinner pechay_spinner = new JSpinner();
+		pechay_spinner.setBounds(219, 253, 30, 20);
+		contentPane.add(pechay_spinner);
 		
-		JSpinner spinner_1 = new JSpinner();
-		spinner_1.setBounds(219, 281, 30, 20);
-		contentPane.add(spinner_1);
+		JSpinner mustard_spinner = new JSpinner();
+		mustard_spinner.setBounds(219, 281, 30, 20);
+		contentPane.add(mustard_spinner);
 		
-		JSpinner spinner_2 = new JSpinner();
-		spinner_2.setBounds(219, 309, 30, 20);
-		contentPane.add(spinner_2);
+		JSpinner okra_spinner = new JSpinner();
+		okra_spinner.setBounds(219, 309, 30, 20);
+		contentPane.add(okra_spinner);
 		
-		JSpinner spinner_3 = new JSpinner();
-		spinner_3.setBounds(219, 337, 30, 20);
-		contentPane.add(spinner_3);
+		JSpinner tomato_spinner = new JSpinner();
+		tomato_spinner.setBounds(219, 337, 30, 20);
+		contentPane.add(tomato_spinner);
 		
-		JSpinner spinner_4 = new JSpinner();
-		spinner_4.setBounds(219, 368, 30, 20);
-		contentPane.add(spinner_4);
+		JSpinner squash_spinner = new JSpinner();
+		squash_spinner.setBounds(219, 368, 30, 20);
+		contentPane.add(squash_spinner);
 		
-		JSpinner spinner_5 = new JSpinner();
-		spinner_5.setBounds(219, 396, 30, 20);
-		contentPane.add(spinner_5);
+		JSpinner stringbeans_spinner = new JSpinner();
+		stringbeans_spinner.setBounds(219, 396, 30, 20);
+		contentPane.add(stringbeans_spinner);
 		
-		JSpinner spinner_6 = new JSpinner();
-		spinner_6.setBounds(219, 424, 30, 20);
-		contentPane.add(spinner_6);
+		JSpinner ampalaya_spinner = new JSpinner();
+		ampalaya_spinner.setBounds(219, 424, 30, 20);
+		contentPane.add(ampalaya_spinner);
 		
-		JSpinner spinner_7 = new JSpinner();
-		spinner_7.setBounds(380, 340, 30, 20);
-		contentPane.add(spinner_7);
+		JSpinner soybeans_spinner = new JSpinner();
+		soybeans_spinner.setBounds(380, 340, 30, 20);
+		contentPane.add(soybeans_spinner);
 		
-		JSpinner spinner_8 = new JSpinner();
-		spinner_8.setBounds(380, 368, 30, 20);
-		contentPane.add(spinner_8);
+		JSpinner radish_spinner = new JSpinner();
+		radish_spinner.setBounds(380, 368, 30, 20);
+		contentPane.add(radish_spinner);
 		
-		JSpinner spinner_9 = new JSpinner();
-		spinner_9.setBounds(380, 396, 30, 20);
-		contentPane.add(spinner_9);
+		JSpinner kangkong_spinner = new JSpinner();
+		kangkong_spinner.setBounds(380, 396, 30, 20);
+		contentPane.add(kangkong_spinner);
 		
-		JSpinner spinner_10 = new JSpinner();
-		spinner_10.setBounds(380, 427, 30, 20);
-		contentPane.add(spinner_10);
+		JSpinner bellpepper_spinner = new JSpinner();
+		bellpepper_spinner.setBounds(380, 427, 30, 20);
+		contentPane.add(bellpepper_spinner);
 		
-		JSpinner spinner_11 = new JSpinner();
-		spinner_11.setBounds(380, 253, 30, 20);
-		contentPane.add(spinner_11);
+		JSpinner siligreen_spinner = new JSpinner();
+		siligreen_spinner.setBounds(380, 253, 30, 20);
+		contentPane.add(siligreen_spinner);
 		
 		JLabel lblNewLabel_1_12 = new JLabel("Sili Green");
 		lblNewLabel_1_12.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1_12.setBounds(420, 256, 63, 14);
 		contentPane.add(lblNewLabel_1_12);
 		
-		JSpinner spinner_12 = new JSpinner();
-		spinner_12.setBounds(380, 281, 30, 20);
-		contentPane.add(spinner_12);
+		JSpinner silired_spinner = new JSpinner();
+		silired_spinner.setBounds(380, 281, 30, 20);
+		contentPane.add(silired_spinner);
 		
 		JLabel lblNewLabel_1_13 = new JLabel("Sili Red");
 		lblNewLabel_1_13.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1_13.setBounds(430, 284, 46, 14);
 		contentPane.add(lblNewLabel_1_13);
 		
-		JSpinner spinner_13 = new JSpinner();
-		spinner_13.setBounds(380, 309, 30, 20);
-		contentPane.add(spinner_13);
+		JSpinner upo_spinner = new JSpinner();
+		upo_spinner.setBounds(380, 309, 30, 20);
+		contentPane.add(upo_spinner);
 		
 		JLabel lblNewLabel_1_14 = new JLabel("Upo");
 		lblNewLabel_1_14.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1_14.setBounds(420, 309, 46, 14);
 		contentPane.add(lblNewLabel_1_14);
+		
+		JButton submit_button = new JButton("Request");
+		submit_button.setFont(new Font("Tahoma", Font.BOLD, 20));
+		submit_button.setBounds(216, 505, 157, 45);
+		contentPane.add(submit_button);
 		new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
