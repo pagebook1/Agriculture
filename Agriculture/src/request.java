@@ -99,43 +99,46 @@ public class request extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_1_2 = new JLabel("Mustard");
-		lblNewLabel_1_2.setBounds(259, 284, 46, 14);
+		lblNewLabel_1_2.setBounds(259, 284, 58, 14);
 		contentPane.add(lblNewLabel_1_2);
 		
 		JLabel lblNewLabel_1_3 = new JLabel("Okra");
+		lblNewLabel_1_3.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1_3.setBounds(259, 312, 46, 14);
 		contentPane.add(lblNewLabel_1_3);
 		
 		JLabel lblNewLabel_1_4 = new JLabel("Tomato");
+		lblNewLabel_1_4.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1_4.setBounds(259, 340, 46, 14);
 		contentPane.add(lblNewLabel_1_4);
 		
 		JLabel lblNewLabel_1_5 = new JLabel("Squash");
+		lblNewLabel_1_5.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1_5.setBounds(259, 371, 46, 14);
 		contentPane.add(lblNewLabel_1_5);
 		
 		JLabel lblNewLabel_1_6 = new JLabel("String Beans");
-		lblNewLabel_1_6.setBounds(259, 399, 60, 14);
+		lblNewLabel_1_6.setBounds(259, 399, 77, 14);
 		contentPane.add(lblNewLabel_1_6);
 		
 		JLabel lblNewLabel_1_7 = new JLabel("Ampalaya");
-		lblNewLabel_1_7.setBounds(259, 427, 60, 14);
+		lblNewLabel_1_7.setBounds(259, 427, 77, 14);
 		contentPane.add(lblNewLabel_1_7);
 		
 		JLabel lblNewLabel_1_8 = new JLabel("Soy Beans");
-		lblNewLabel_1_8.setBounds(259, 455, 60, 14);
+		lblNewLabel_1_8.setBounds(420, 343, 77, 14);
 		contentPane.add(lblNewLabel_1_8);
 		
 		JLabel lblNewLabel_1_9 = new JLabel("Radish");
-		lblNewLabel_1_9.setBounds(259, 483, 46, 14);
+		lblNewLabel_1_9.setBounds(420, 371, 77, 14);
 		contentPane.add(lblNewLabel_1_9);
 		
 		JLabel lblNewLabel_1_10 = new JLabel("Kangkong");
-		lblNewLabel_1_10.setBounds(259, 511, 60, 14);
+		lblNewLabel_1_10.setBounds(420, 399, 77, 14);
 		contentPane.add(lblNewLabel_1_10);
 		
 		JLabel lblNewLabel_1_11 = new JLabel("Bell Pepper");
-		lblNewLabel_1_11.setBounds(259, 542, 60, 14);
+		lblNewLabel_1_11.setBounds(420, 430, 77, 14);
 		contentPane.add(lblNewLabel_1_11);
 		
 		JSpinner spinner = new JSpinner();
@@ -167,19 +170,19 @@ public class request extends JFrame {
 		contentPane.add(spinner_6);
 		
 		JSpinner spinner_7 = new JSpinner();
-		spinner_7.setBounds(219, 452, 30, 20);
+		spinner_7.setBounds(380, 340, 30, 20);
 		contentPane.add(spinner_7);
 		
 		JSpinner spinner_8 = new JSpinner();
-		spinner_8.setBounds(219, 480, 30, 20);
+		spinner_8.setBounds(380, 368, 30, 20);
 		contentPane.add(spinner_8);
 		
 		JSpinner spinner_9 = new JSpinner();
-		spinner_9.setBounds(219, 508, 30, 20);
+		spinner_9.setBounds(380, 396, 30, 20);
 		contentPane.add(spinner_9);
 		
 		JSpinner spinner_10 = new JSpinner();
-		spinner_10.setBounds(219, 539, 30, 20);
+		spinner_10.setBounds(380, 427, 30, 20);
 		contentPane.add(spinner_10);
 		
 		JSpinner spinner_11 = new JSpinner();
@@ -187,23 +190,26 @@ public class request extends JFrame {
 		contentPane.add(spinner_11);
 		
 		JLabel lblNewLabel_1_12 = new JLabel("Sili Green");
-		lblNewLabel_1_12.setBounds(420, 256, 46, 14);
+		lblNewLabel_1_12.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel_1_12.setBounds(420, 256, 63, 14);
 		contentPane.add(lblNewLabel_1_12);
 		
 		JSpinner spinner_12 = new JSpinner();
-		spinner_12.setBounds(380, 288, 30, 20);
+		spinner_12.setBounds(380, 281, 30, 20);
 		contentPane.add(spinner_12);
 		
 		JLabel lblNewLabel_1_13 = new JLabel("Sili Red");
-		lblNewLabel_1_13.setBounds(420, 291, 46, 14);
+		lblNewLabel_1_13.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel_1_13.setBounds(430, 284, 46, 14);
 		contentPane.add(lblNewLabel_1_13);
 		
 		JSpinner spinner_13 = new JSpinner();
-		spinner_13.setBounds(380, 319, 30, 20);
+		spinner_13.setBounds(380, 309, 30, 20);
 		contentPane.add(spinner_13);
 		
 		JLabel lblNewLabel_1_14 = new JLabel("Upo");
-		lblNewLabel_1_14.setBounds(420, 322, 46, 14);
+		lblNewLabel_1_14.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel_1_14.setBounds(420, 309, 46, 14);
 		contentPane.add(lblNewLabel_1_14);
 		new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
