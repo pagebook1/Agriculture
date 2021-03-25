@@ -1,25 +1,24 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
 import java.awt.Font;
-import javax.swing.SwingConstants;
-import java.awt.GridLayout;
-import java.awt.FlowLayout;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import com.jgoodies.forms.layout.FormSpecs;
-import javax.swing.JTextField;
-import javax.swing.JComboBox;
-import javax.swing.DefaultComboBoxModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.Timer;
 import java.util.TimerTask;
-import javax.swing.JSpinner;
+
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
 @SuppressWarnings("serial")
 public class request extends JFrame {
@@ -27,6 +26,23 @@ public class request extends JFrame {
 	private JPanel contentPane;
 	private JTextField name_text;
 	private JTextField DateTime;
+	String[] seeds = {};
+	private JSpinner pechay_spinner;
+	private JSpinner mustard_spinner;
+	private JSpinner okra_spinner;
+	private JSpinner tomato_spinner;
+	private JSpinner squash_spinner;
+	private JSpinner stringbeans_spinner;
+	private JSpinner ampalaya_spinner;
+	private JSpinner soybeans_spinner;
+	private JSpinner radish_spinner;
+	private JSpinner kangkong_spinner;
+	private JSpinner bellpepper_spinner;
+	private JSpinner siligreen_spinner;
+	private JSpinner silired_spinner;
+	private JSpinner upo_spinner;
+	private JComboBox barangay_list;
+	
 
 	/**
 	 * Launch the application.
@@ -46,8 +62,10 @@ public class request extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @throws SQLException 
+	 * @throws ClassNotFoundException 
 	 */
-	public request() {
+	public request() throws SQLException, ClassNotFoundException {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 0, 1080, 720);
 		contentPane = new JPanel();
@@ -82,11 +100,20 @@ public class request extends JFrame {
 		contentPane.add(name_text);
 		name_text.setColumns(10);
 		
-		JComboBox barangay_list = new JComboBox();
+		
+		barangay_list = new JComboBox();
 		barangay_list.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		barangay_list.setModel(new DefaultComboBoxModel(new String[] {"Mapagmahal", "Bagong-Pagasa", "Bagong Silang", "Pagkakaisa", "Villamanzano Sur", "Villamanzano Norte", "Pambuhan"}));
+		barangay_list.setModel(new DefaultComboBoxModel());
 		barangay_list.setBounds(339, 150, 303, 23);
 		contentPane.add(barangay_list);
+//		dbCon.dbquery().sql = "SELECT * FROM `barangay_list`";
+		dbcon.dbquery query = new dbcon.dbquery("SELECT * FROM `barangay_list`");
+		int x = 0;
+		while ( x < query.ar.size())
+		{
+			barangay_list.addItem(query.ar.get(x));
+			x++;
+		}
 		
 		DateTime = new JTextField();
 		DateTime.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -142,51 +169,51 @@ public class request extends JFrame {
 		lblNewLabel_1_11.setBounds(420, 430, 77, 14);
 		contentPane.add(lblNewLabel_1_11);
 		
-		JSpinner pechay_spinner = new JSpinner();
+		 pechay_spinner = new JSpinner();
 		pechay_spinner.setBounds(219, 253, 30, 20);
 		contentPane.add(pechay_spinner);
 		
-		JSpinner mustard_spinner = new JSpinner();
+		 mustard_spinner = new JSpinner();
 		mustard_spinner.setBounds(219, 281, 30, 20);
 		contentPane.add(mustard_spinner);
 		
-		JSpinner okra_spinner = new JSpinner();
+		 okra_spinner = new JSpinner();
 		okra_spinner.setBounds(219, 309, 30, 20);
 		contentPane.add(okra_spinner);
 		
-		JSpinner tomato_spinner = new JSpinner();
+		 tomato_spinner = new JSpinner();
 		tomato_spinner.setBounds(219, 337, 30, 20);
 		contentPane.add(tomato_spinner);
 		
-		JSpinner squash_spinner = new JSpinner();
+		 squash_spinner = new JSpinner();
 		squash_spinner.setBounds(219, 368, 30, 20);
 		contentPane.add(squash_spinner);
 		
-		JSpinner stringbeans_spinner = new JSpinner();
+		 stringbeans_spinner = new JSpinner();
 		stringbeans_spinner.setBounds(219, 396, 30, 20);
 		contentPane.add(stringbeans_spinner);
 		
-		JSpinner ampalaya_spinner = new JSpinner();
+		 ampalaya_spinner = new JSpinner();
 		ampalaya_spinner.setBounds(219, 424, 30, 20);
 		contentPane.add(ampalaya_spinner);
 		
-		JSpinner soybeans_spinner = new JSpinner();
+		 soybeans_spinner = new JSpinner();
 		soybeans_spinner.setBounds(380, 340, 30, 20);
 		contentPane.add(soybeans_spinner);
 		
-		JSpinner radish_spinner = new JSpinner();
+		 radish_spinner = new JSpinner();
 		radish_spinner.setBounds(380, 368, 30, 20);
 		contentPane.add(radish_spinner);
 		
-		JSpinner kangkong_spinner = new JSpinner();
+		 kangkong_spinner = new JSpinner();
 		kangkong_spinner.setBounds(380, 396, 30, 20);
 		contentPane.add(kangkong_spinner);
 		
-		JSpinner bellpepper_spinner = new JSpinner();
+		 bellpepper_spinner = new JSpinner();
 		bellpepper_spinner.setBounds(380, 427, 30, 20);
 		contentPane.add(bellpepper_spinner);
 		
-		JSpinner siligreen_spinner = new JSpinner();
+		 siligreen_spinner = new JSpinner();
 		siligreen_spinner.setBounds(380, 253, 30, 20);
 		contentPane.add(siligreen_spinner);
 		
@@ -195,7 +222,7 @@ public class request extends JFrame {
 		lblNewLabel_1_12.setBounds(420, 256, 63, 14);
 		contentPane.add(lblNewLabel_1_12);
 		
-		JSpinner silired_spinner = new JSpinner();
+		 silired_spinner = new JSpinner();
 		silired_spinner.setBounds(380, 281, 30, 20);
 		contentPane.add(silired_spinner);
 		
@@ -204,7 +231,7 @@ public class request extends JFrame {
 		lblNewLabel_1_13.setBounds(430, 284, 46, 14);
 		contentPane.add(lblNewLabel_1_13);
 		
-		JSpinner upo_spinner = new JSpinner();
+		 upo_spinner = new JSpinner();
 		upo_spinner.setBounds(380, 309, 30, 20);
 		contentPane.add(upo_spinner);
 		
@@ -212,11 +239,73 @@ public class request extends JFrame {
 		lblNewLabel_1_14.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1_14.setBounds(420, 309, 46, 14);
 		contentPane.add(lblNewLabel_1_14);
-		
 		JButton submit_button = new JButton("Request");
+		submit_button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(name_text.getText().equals(""))
+				{
+					
+					JOptionPane.showMessageDialog(null,
+						    "Do not leave blank on Name",
+						    "Inane error",
+						    JOptionPane.ERROR_MESSAGE);
+
+				}
+				else if(barangay_list.getSelectedItem().toString() == "")
+				{
+					JOptionPane.showMessageDialog(null,
+						    "Do not leave blank on Barangay",
+						    "Inane error",
+						    JOptionPane.ERROR_MESSAGE);
+
+				}
+				else {
+					seeds = new String[]{
+							pechay_spinner.getValue().toString(),
+							mustard_spinner.getValue().toString(),
+							okra_spinner.getValue().toString(),
+							tomato_spinner.getValue().toString(),
+							squash_spinner.getValue().toString(),
+							stringbeans_spinner.getValue().toString(),
+							ampalaya_spinner.getValue().toString(),
+							siligreen_spinner.getValue().toString(),
+							silired_spinner.getValue().toString(),
+							upo_spinner.getValue().toString(),
+							soybeans_spinner.getValue().toString(),
+							radish_spinner.getValue().toString(),
+							kangkong_spinner.getValue().toString(),
+							bellpepper_spinner.getValue().toString(),
+							};
+					String name = name_text.getText();
+					String date = DateTime.getText();
+					String barangay = barangay_list.getSelectedItem().toString();
+					try {
+						new dbcon().addData("INSERT INTO `acknowledgement_reciept` (`ID`, `date`, `name`, `barangay`, `pechay`, `mustard`, `okra`, `tomato`, `squash`, `string_beans`, `ampalaya`, `sili_green`, `sili_red`, `upo`, `soy_beans`, `radish`, `kangkong`, `bell_pepper`) VALUES (NULL, '"+date+"', '"+name+"', '"+barangay+"', '"+seeds[0]+"', '"+seeds[1]+"', '"+seeds[2]+"', '"+seeds[3]+"', '"+seeds[4]+"', '"+seeds[5]+"', '"+seeds[6]+"', '"+seeds[7]+"', '"+seeds[8]+"', '"+seeds[9]+"', '"+seeds[10]+"', '"+seeds[11]+"', '"+seeds[12]+"', '"+seeds[13]+"');");
+						JOptionPane.showMessageDialog(null,
+							    "Data Added",
+							    "Inane Information",
+							    JOptionPane.INFORMATION_MESSAGE);
+						 seeds();
+					} catch (SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
 		submit_button.setFont(new Font("Tahoma", Font.BOLD, 20));
 		submit_button.setBounds(216, 505, 157, 45);
 		contentPane.add(submit_button);
+		
+		JButton reset_btn = new JButton("reset");
+		reset_btn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				seeds();
+			}
+		});
+		reset_btn.setFont(new Font("Tahoma", Font.BOLD, 20));
+		reset_btn.setBounds(404, 505, 157, 45);
+		contentPane.add(reset_btn);
 		new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
@@ -225,5 +314,24 @@ public class request extends JFrame {
             	DateTime.setText(dateTime.currentDateTime().toString());
             }
         }, 0, 1000);
+	}
+	public void seeds()
+	{
+		name_text.setText("");
+		barangay_list.setSelectedIndex(0);
+		pechay_spinner.setValue(0);
+		mustard_spinner.setValue(0);
+		okra_spinner.setValue(0);
+		tomato_spinner.setValue(0);
+		squash_spinner.setValue(0);
+		stringbeans_spinner.setValue(0);
+		soybeans_spinner.setValue(0);
+		ampalaya_spinner.setValue(0);
+		radish_spinner.setValue(0);
+		kangkong_spinner.setValue(0);
+		bellpepper_spinner.setValue(0);
+		siligreen_spinner.setValue(0);
+		silired_spinner.setValue(0);
+		upo_spinner.setValue(0);
 	}
 }
